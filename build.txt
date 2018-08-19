@@ -1,0 +1,4 @@
+author = Beetrootmonkey
+version = 1.0.6
+displayName = MissingAccessories
+homepage = https://github.com/Beetrootmonkey/MissingAccessories
