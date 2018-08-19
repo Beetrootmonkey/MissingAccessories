@@ -34,9 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Items\StrangeBundleOfBloons.cs" />
+    <Compile Include="Items\BonetoothNecklace.cs" />
+    <Compile Include="Items\DaddyBloon.cs" />
     <Compile Include="Items\FrozenPaladinShield.cs" />
     <Compile Include="Items\GatlingStynger.cs" />
+    <Compile Include="Items\RazorbladeNecklace.cs" />
+    <Compile Include="Items\SawbladeNecklace.cs" />
+    <Compile Include="Items\StackedBonetoothNecklace.cs" />
+    <Compile Include="Items\StrangeBundleOfBloons.cs" />
     <Compile Include="Items\TrueBladeBreaker.cs" />
     <Compile Include="Items\TerraBuster.cs" />
   </ItemGroup>
@@ -64,9 +69,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Items\BonetoothNecklace.png" />
+    <Content Include="Items\DaddyBloon.png" />
+    <Content Include="Items\DaddyBloon_Balloon.png" />
     <Content Include="Items\FrozenPaladinShield.png" />
     <Content Include="Items\FrozenPaladinShield_Shield.png" />
     <Content Include="Items\GatlingStynger.png" />
+    <Content Include="Items\RazorbladeNecklace.png" />
+    <Content Include="Items\SawbladeNecklace.png" />
+    <Content Include="Items\StackedBonetoothNecklace.png" />
+    <Content Include="Items\StrangeBundleOfBloons.png" />
+    <Content Include="Items\StrangeBundleOfBloons_Balloon.png" />
     <Content Include="Items\TerraBuster.png" />
     <Content Include="Items\TrueBladeBreaker.png" />
   </ItemGroup>
