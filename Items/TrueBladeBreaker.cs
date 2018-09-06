@@ -19,8 +19,8 @@ namespace missingaccessories.Items
             item.knockBack = 8.5f;
             item.width = 70;
             item.height = 80;
-            item.damage = 120;
-            item.scale = 1.05f;
+            item.damage = 150;
+            item.scale = 1.2f;
             item.UseSound = SoundID.Item1;
             item.rare = 4;
             item.value = Item.sellPrice(0, 10, 0, 0);

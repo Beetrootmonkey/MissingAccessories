@@ -94,10 +94,14 @@ namespace missingaccessories.Items
 			return true;
 		}
 
+
+
         public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(0, 0);
 		}
+
+
     }
 }
 

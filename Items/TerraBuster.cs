@@ -26,8 +26,10 @@ namespace missingaccessories.Items
             item.scale = 1.3f;
             item.shootSpeed = 16f;
             item.melee = true;
+            item.knockBack = 9;
             item.value = Item.sellPrice(0, 30, 0, 0);
             item.autoReuse = true;
+            item.useTurn = true;
         }
 
         public override void AddRecipes()

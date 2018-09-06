@@ -206,18 +206,7 @@ namespace missingaccessories.Items
             recipe.AddRecipe();
         }
 
-        private int GetIndexInArray(object[] arr, object obj)
-        {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i].Equals(obj))
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
+        
 
         public override bool CanRightClick()
         {
@@ -233,7 +222,7 @@ namespace missingaccessories.Items
             obj1.netDefaults(mod.GetItem("StackedBonetoothNecklace").item.type);
             Item obj2 = obj1.CloneWithModdedDataFrom(item);
             obj2.Prefix(this.item.prefix);
-            int index = GetIndexInArray(player.inventory, item);
+            int index = Utils.GetIndexInArray(player.inventory, item);
             item = obj2.Clone();
             item.position.X = player.position.X + (float)(player.width / 2) - (float)(item.width / 2);
             item.position.Y = player.position.Y + (float)(player.height / 2) - (float)(item.height / 2);

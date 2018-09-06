@@ -35,15 +35,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Items\BonetoothNecklace.cs" />
+    <Compile Include="Items\LaserWeapon.cs" />
+    <Compile Include="Items\StarShredder.cs" />
+    <Compile Include="Items\Chain.cs" />
+    <Compile Include="Items\Chain2.cs" />
+    <Compile Include="Items\Chain3.cs" />
+    <Compile Include="Items\Chain4.cs" />
     <Compile Include="Items\DaddyBloon.cs" />
     <Compile Include="Items\FrozenPaladinShield.cs" />
+    <Compile Include="Items\CelestialAnnihilation.cs" />
     <Compile Include="Items\GatlingStynger.cs" />
+    <Compile Include="Items\GlobalCustomItem.cs" />
     <Compile Include="Items\RazorbladeNecklace.cs" />
+    <Compile Include="Items\ReallyGoodBoots.cs" />
     <Compile Include="Items\SawbladeNecklace.cs" />
     <Compile Include="Items\StackedBonetoothNecklace.cs" />
     <Compile Include="Items\StrangeBundleOfBloons.cs" />
     <Compile Include="Items\TrueBladeBreaker.cs" />
     <Compile Include="Items\TerraBuster.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
@@ -70,12 +80,26 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Items\BonetoothNecklace.png" />
+    <Content Include="Items\LaserWeapon.png" />
+    <Content Include="Items\StarShredder.png" />
+    <Content Include="Items\CelestialAnnihilation.png" />
+    <Content Include="Items\Chain2.png" />
+    <Content Include="Items\Chain2_HandsOff.png" />
+    <Content Include="Items\Chain2_HandsOn.png" />
+    <Content Include="Items\Chain3.png" />
+    <Content Include="Items\Chain3_HandsOff.png" />
+    <Content Include="Items\Chain3_HandsOn.png" />
+    <Content Include="Items\Chain4.png" />
+    <Content Include="Items\Chain4_HandsOff.png" />
+    <Content Include="Items\Chain4_HandsOn.png" />
     <Content Include="Items\DaddyBloon.png" />
     <Content Include="Items\DaddyBloon_Balloon.png" />
     <Content Include="Items\FrozenPaladinShield.png" />
     <Content Include="Items\FrozenPaladinShield_Shield.png" />
     <Content Include="Items\GatlingStynger.png" />
     <Content Include="Items\RazorbladeNecklace.png" />
+    <Content Include="Items\ReallyGoodBoots.png" />
+    <Content Include="Items\ReallyGoodBoots_Shoes.png" />
     <Content Include="Items\SawbladeNecklace.png" />
     <Content Include="Items\StackedBonetoothNecklace.png" />
     <Content Include="Items\StrangeBundleOfBloons.png" />
