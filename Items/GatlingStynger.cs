@@ -10,7 +10,7 @@ namespace missingaccessories.Items
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Shoots explosive bolts" +
-                "\n Only the first shot onconsumes ammo");
+                "\nOnly the first shot onconsumes ammo");
         }
 
         public override void SetDefaults()

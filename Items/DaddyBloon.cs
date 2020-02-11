@@ -9,7 +9,7 @@ namespace missingaccessories.Items
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows the holder to septuple jump"
+            Tooltip.SetDefault("Allows the holder to sextuple jump"
                 + "\nNegates fall damage"
                 + "\nIncreases jump height"
                 + "\nReleases bees when damaged");
