@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories.Items
+namespace MissingAccessories.Items.Accessories
 {
     public class Chain3 : Chain
     {

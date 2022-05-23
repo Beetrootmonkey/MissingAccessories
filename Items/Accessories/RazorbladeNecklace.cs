@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories.Items
+namespace missingaccessories.Items.Accessories
 {
     public class RazorbladeNecklace : ModItem
     {

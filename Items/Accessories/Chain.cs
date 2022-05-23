@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories.Items
+namespace MissingAccessories.Items.Accessories
 {
     [AutoloadEquip(EquipType.HandsOn, EquipType.HandsOff)]
     public abstract class Chain : ModItem

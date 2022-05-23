@@ -1,8 +1,9 @@
-﻿using Terraria;
+﻿using MissingAccessories.Items.Accessories;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories.Items
+namespace MissingAccessories.Items
 {
     class GlobalCustomItem : GlobalItem
     {

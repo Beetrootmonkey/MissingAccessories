@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories.Items
+namespace MissingAccessories.Items.Accessories
 {
     [AutoloadEquip(EquipType.Shield)]
     public class FrozenPaladinShield : ModItem
@@ -10,7 +10,8 @@ namespace missingaccessories.Items
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("While above 25% life: Absorbs 25% of damage done to players on your team" +
-                "\nUnder 25% life: Puts a shell around the owner that reduces damage by 25%");
+                "\nUnder 50% life: Puts a shell around the owner that reduces damage by 25%" +
+                "\nGrants immunity to knockback");
             DisplayName.SetDefault("Frozen Paladin's Shield");
         }
 
@@ -20,8 +21,8 @@ namespace missingaccessories.Items
             item.height = 24;
             item.accessory = true;
             item.rare = 8;
-            item.defense = 6;
-            item.value = 300000;
+            item.defense = 8;
+            item.value = Item.sellPrice(0, 20, 0, 0);
         }
 
         private int GetIndexInArray(object[] arr, object obj)

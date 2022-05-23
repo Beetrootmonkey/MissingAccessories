@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories
+namespace MissingAccessories
 {
     static class Utils
     {
@@ -58,11 +58,32 @@ namespace missingaccessories
             return HasAccessory(arr, type, new int[] { indexToIgnore });
         }
 
+        public static bool HasAccessory(Item[] arr, Mod mod, string itemName, int indexToIgnore = -1)
+        {
+            return HasAccessory(arr, mod, itemName, new int[] { indexToIgnore });
+        }
+
         public static bool HasAccessory(Item[] arr, int type, int[] indicesToIgnore)
         {
-            for (int i = 3; i < 10; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i].type == type)
+                {
+                    if (!IsInArray(indicesToIgnore, i))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public static bool HasAccessory(Item[] arr, Mod mod, string itemName, int[] indicesToIgnore)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i]?.modItem?.mod == mod && arr[i]?.modItem?.Name == itemName)
                 {
                     if (!IsInArray(indicesToIgnore, i))
                     {

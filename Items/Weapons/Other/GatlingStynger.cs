@@ -3,14 +3,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace missingaccessories.Items
+namespace MissingAccessories.Items.Weapons.Other
 {
     class GatlingStynger : ModItem
     {
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Shoots explosive bolts" +
-                "\nOnly the first shot onconsumes ammo");
+                "\nFour round burst" +
+                "\nOnly the first shot consumes ammo");
         }
 
         public override void SetDefaults()

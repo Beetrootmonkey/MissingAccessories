@@ -1,3 +1,4 @@
+using MissingAccessories.Projectiles;
 using Terraria.ModLoader;
 
 namespace MissingAccessories
@@ -7,5 +8,11 @@ namespace MissingAccessories
 		public MissingAccessories()
 		{
 		}
-	}
+
+        public override void Load()
+        {
+            base.Load();
+            //AddProjectile("FanThrowingKnife0", new FanThrowingKnife());
+        }
+    }
 }
