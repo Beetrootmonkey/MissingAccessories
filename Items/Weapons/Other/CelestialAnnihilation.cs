@@ -24,7 +24,7 @@ namespace MissingAccessories.Items.Weapons.Other
             item.shoot = 503;
             item.useAmmo = AmmoID.FallenStar;
             item.UseSound = SoundID.Item9;
-            item.damage = 180;
+            item.damage = 100;
             item.shootSpeed = 18f;
             item.noMelee = true;
             item.value = Item.sellPrice(0, 50, 0, 0);
