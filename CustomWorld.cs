@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using MissingAccessories.Items.Weapons.ThrowingKnives;
+//using MissingAccessories.Items.Weapons.ThrowingKnives;
 using System.Collections.Generic;
 using System.IO;
 using Terraria;
@@ -17,7 +17,7 @@ namespace MissingAccessories
 {
     public class CustomWorld : ModWorld
     {
-        //// We use this hook to add 3 steps to world generation at various points. 
+        //// We use this hook to add 3 steps to world generation at various points.
         //public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         //{
         //    // Because world generation is like layering several images ontop of each other, we need to do some steps between the original world generation steps.
@@ -27,7 +27,7 @@ namespace MissingAccessories
         //    int ShiniesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
         //    if (ShiniesIndex != -1)
         //    {
-        //        // Next, we insert our step directly after the original "Shinies" step. 
+        //        // Next, we insert our step directly after the original "Shinies" step.
         //        // ExampleModOres is a method seen below.
         //        tasks.Insert(ShiniesIndex + 1, new PassLegacy("Example Mod Ores", ExampleModOres));
         //    }
@@ -43,7 +43,7 @@ namespace MissingAccessories
         //    if (LivingTreesIndex != -1)
         //    {
         //        tasks.Insert(LivingTreesIndex + 1, new PassLegacy("Post Terrain", delegate (GenerationProgress progress) {
-        //            // We can inline the world generation code like this, but if exceptions happen within this code 
+        //            // We can inline the world generation code like this, but if exceptions happen within this code
         //            // the error messages are difficult to read, so making methods is better. This is called an anonymous method.
         //            progress.Message = "What is it Lassie, did Timmy fall down a well?";
         //            MakeWells();
@@ -53,7 +53,7 @@ namespace MissingAccessories
 
         //private void ExampleModOres(GenerationProgress progress)
         //{
-        //    // progress.Message is the message shown to the user while the following code is running. Try to make your message clear. You can be a little bit clever, but make sure it is descriptive enough for troubleshooting purposes. 
+        //    // progress.Message is the message shown to the user while the following code is running. Try to make your message clear. You can be a little bit clever, but make sure it is descriptive enough for troubleshooting purposes.
         //    progress.Message = "Example Mod Ores";
 
         //    // Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
@@ -82,7 +82,7 @@ namespace MissingAccessories
         //    progress.Message = "Example Mod Traps";
 
         //    // Computers are fast, so WorldGen code sometimes looks stupid.
-        //    // Here, we want to place a bunch of tiles in the world, so we just repeat until success. It might be useful to keep track of attempts and check for attempts > maxattempts so you don't have infinite loops. 
+        //    // Here, we want to place a bunch of tiles in the world, so we just repeat until success. It might be useful to keep track of attempts and check for attempts > maxattempts so you don't have infinite loops.
         //    // The WorldGen.PlaceTile method returns a bool, but it is useless. Instead, we check the tile after calling it and if it is the desired tile, we know we succeeded.
         //    for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
         //    {
@@ -288,35 +288,35 @@ namespace MissingAccessories
         //}
 
         // We can use PostWorldGen for world generation tasks that don't need to happen between vanilla world generation steps.
-        public override void PostWorldGen()
-        {
-            // This is simply generating a line of Chlorophyte halfway down the world.
-            //for (int i = 0; i < Main.maxTilesX; i++)
-            //{
-            //	Main.tile[i, Main.maxTilesY / 2].type = TileID.Chlorophyte;
-            //}
-
-            // Place some items in Ice Chests
-            int[] itemsToPlaceInIceChests = { ItemType<BoneThrowingKnives>() };
-            int itemsToPlaceInIceChestsChoice = 0;
-            for (int chestIndex = 0; chestIndex < 1000; chestIndex++)
-            {
-                Chest chest = Main.chest[chestIndex];
-                // If you look at the sprite for Chests by extracting Tiles_21.xnb, you'll see that the 12th chest is the Ice Chest. Since we are counting from 0, this is where 11 comes from. 36 comes from the width of each tile including padding. 
-                if (chest != null && Main.tile[chest.x, chest.y].type == TileID.Containers && Main.tile[chest.x, chest.y].frameX == 2 * 36)
-                {
-                    for (int inventoryIndex = 0; inventoryIndex < 40; inventoryIndex++)
-                    {
-                        if (chest.item[inventoryIndex].type == 0 && Main.rand.Next(0, 10) == 0)
-                        {
-                            chest.item[inventoryIndex].SetDefaults(itemsToPlaceInIceChests[itemsToPlaceInIceChestsChoice]);
-                            itemsToPlaceInIceChestsChoice = (itemsToPlaceInIceChestsChoice + 1) % itemsToPlaceInIceChests.Length;
-                            // Alternate approach: Random instead of cyclical: chest.item[inventoryIndex].SetDefaults(Main.rand.Next(itemsToPlaceInIceChests));
-                            break;
-                        }
-                    }
-                }
-            }
-        }
+//        public override void PostWorldGen()
+//        {
+//            // This is simply generating a line of Chlorophyte halfway down the world.
+//            //for (int i = 0; i < Main.maxTilesX; i++)
+//            //{
+//            //	Main.tile[i, Main.maxTilesY / 2].type = TileID.Chlorophyte;
+//            //}
+//
+//            // Place some items in Ice Chests
+//            int[] itemsToPlaceInIceChests = { ItemType<BoneThrowingKnives>() };
+//            int itemsToPlaceInIceChestsChoice = 0;
+//            for (int chestIndex = 0; chestIndex < 1000; chestIndex++)
+//            {
+//                Chest chest = Main.chest[chestIndex];
+//                // If you look at the sprite for Chests by extracting Tiles_21.xnb, you'll see that the 12th chest is the Ice Chest. Since we are counting from 0, this is where 11 comes from. 36 comes from the width of each tile including padding.
+//                if (chest != null && Main.tile[chest.x, chest.y].type == TileID.Containers && Main.tile[chest.x, chest.y].frameX == 2 * 36)
+//                {
+//                    for (int inventoryIndex = 0; inventoryIndex < 40; inventoryIndex++)
+//                    {
+//                        if (chest.item[inventoryIndex].type == 0 && Main.rand.Next(0, 10) == 0)
+//                        {
+//                            chest.item[inventoryIndex].SetDefaults(itemsToPlaceInIceChests[itemsToPlaceInIceChestsChoice]);
+//                            itemsToPlaceInIceChestsChoice = (itemsToPlaceInIceChestsChoice + 1) % itemsToPlaceInIceChests.Length;
+//                            // Alternate approach: Random instead of cyclical: chest.item[inventoryIndex].SetDefaults(Main.rand.Next(itemsToPlaceInIceChests));
+//                            break;
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
 }

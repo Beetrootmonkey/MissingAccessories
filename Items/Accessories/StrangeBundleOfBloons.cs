@@ -26,6 +26,7 @@ namespace MissingAccessories.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            // TODO: Honey Balloon jump?
             player.doubleJumpFart = true;
             player.doubleJumpSail = true;
             player.jumpBoost = true;

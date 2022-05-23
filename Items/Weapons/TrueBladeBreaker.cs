@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace MissingAccessories.Items.Weapons.Other
+namespace MissingAccessories.Items.Weapons
 {
     class TrueBladeBreaker : ModItem
     {
@@ -23,7 +23,7 @@ namespace MissingAccessories.Items.Weapons.Other
             item.scale = 1.2f;
             item.UseSound = SoundID.Item1;
             item.rare = 4;
-            item.value = Item.sellPrice(0, 10, 0, 0);
+            item.value = Item.sellPrice(0, 12, 0, 0);
             item.melee = true;
         }
 

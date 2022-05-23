@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace MissingAccessories.Items.Weapons.Other
+namespace MissingAccessories.Items.Weapons
 {
     class TerraBuster : ModItem
     {
@@ -19,7 +19,7 @@ namespace MissingAccessories.Items.Weapons.Other
             item.useStyle = 1;
             item.damage = 100;
             item.useAnimation = 20;
-            item.useTime = 20;
+            item.useTime = 30;
             item.width = 86;
             item.height = 100;
             item.shoot = 132;
@@ -27,7 +27,7 @@ namespace MissingAccessories.Items.Weapons.Other
             item.shootSpeed = 16f;
             item.melee = true;
             item.knockBack = 9;
-            item.value = Item.sellPrice(0, 30, 0, 0);
+            item.value = Item.sellPrice(0, 35, 0, 0);
             item.autoReuse = true;
             item.useTurn = true;
         }
@@ -44,11 +44,11 @@ namespace MissingAccessories.Items.Weapons.Other
 
         // Star Wrath/Starfury style weapon. Spawn projectiles from sky that aim towards mouse.
         // See Source code for Star Wrath projectile to see how it passes through tiles.
-        //	The following changes to SetDefaults 
+        //	The following changes to SetDefaults
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            int amount = Main.rand.Next(1, 3);
+            int amount = Main.rand.Next(3, 7);
             for (int i = 0; i < amount; i++)
             {
                 Vector2 target = Main.screenPosition
